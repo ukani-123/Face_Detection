@@ -534,7 +534,7 @@
                     android:id="@+id/ivAuto"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:src="@drawable/ic_launcher_background" />
+                    android:src="@drawable/resize_expand" />
 
                 <TextView
                     android:id="@+id/tvAuto"
@@ -559,7 +559,7 @@
                     android:id="@+id/ivErase"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:src="@drawable/ic_launcher_background" />
+                    android:src="@drawable/bgg" />
 
                 <TextView
                     android:id="@+id/tvErase"
@@ -635,7 +635,7 @@
                     android:id="@+id/ivShape"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:src="@drawable/ic_launcher_background" />
+                    android:src="@drawable/image" />
 
                 <TextView
                     android:id="@+id/tvShape"
