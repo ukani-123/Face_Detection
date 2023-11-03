@@ -487,8 +487,7 @@
             android:id="@+id/mainImageView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_launcher_background" />
+            android:scaleType="centerCrop"/>
 
         <com.example.facedetection.StickerView
             android:id="@+id/stickerView"

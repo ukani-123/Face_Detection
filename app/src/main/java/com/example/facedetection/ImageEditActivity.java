@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
@@ -15,6 +16,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.provider.MediaStore;
+import android.text.Layout;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
@@ -53,6 +55,7 @@ public class ImageEditActivity extends AppCompatActivity {
     FaceDetector detector;
     InputImage image;
     StickerView stickerView;
+    TextAdapter textAdapter;
     RecyclerView rvBG;
     ImageView ivBackground, mainImageView, imgDone,ivCloseStickerOperation,ivCloseBackgroundRcv;
     FrameLayout flMainLayout,llOperation;
@@ -476,4 +479,91 @@ public class ImageEditActivity extends AppCompatActivity {
             rvBG.setVisibility(View.VISIBLE);
         }
     }
+//    public void txtAdapter() {
+//        ArrayList<TextTool> textTool = new ArrayList<>();
+//        textTool.add(new TextTool("color", R.drawable.color));
+//        textTool.add(new TextTool("Bg Color", R.drawable.bgcolor));
+//        textTool.add(new TextTool("Font", R.drawable.font));
+//        textTool.add(new TextTool("Align", R.drawable.center));
+//        rvBG.setAdapter(textAdapter = new TextAdapter(textTool, MainActivity.this, new TextInter() {
+//            @Override
+//            public void onClickText(int position) {
+//                switch (position) {
+//                    case 0:
+//                        colorRecyclerView.setAdapter(new ColorAdapter(MainActivity.this, fetchTextStickerColor(), new ColorInter() {
+//                            @Override
+//                            public void onclickColor(int position) {
+//                                if (stickerView.getCurrentSticker() instanceof TextSticker) {
+//                                    TextSticker operational = (TextSticker) stickerView.getCurrentSticker();
+//                                    operational.setTextColor(fetchTextStickerColor().get(position));
+//                                    stickerView.replace(operational);
+//                                    stickerView.invalidate();
+//                                }
+//                            }
+//                        }));
+//                        break;
+//                    case 1:
+//                        stickerUnLock();
+//                        visible(colorLayout);
+//                        gone(fontLayout, subRecyclerView);
+//                        colorRecyclerView.setAdapter(new ColorAdapter(MainActivity.this, fetchTextStickerColor(), new ColorInter() {
+//                            @Override
+//                            public void onclickColor(int position) {
+//                                if (stickerView.getCurrentSticker() instanceof TextSticker) {
+//                                    TextSticker operational = (TextSticker) stickerView.getCurrentSticker();
+//                                    operational.setTextBackgroundColor(fetchTextStickerColor().get(position));
+//                                    stickerView.replace(operational);
+//                                    stickerView.invalidate();
+//                                }
+//                            }
+//                        }));
+//                        break;
+//                    case 2:
+//                        stickerUnLock();
+//                        visible(fontLayout);
+//                        gone(colorLayout, subRecyclerView);
+//                        fontRecyclerView.setAdapter(new FontAdapter(MainActivity.this, new FontClick() {
+//                            @Override
+//                            public void onFontClick(Typeface typeface) {
+//                                if (stickerView.getCurrentSticker() instanceof TextSticker) {
+//                                    TextSticker operational = (TextSticker) stickerView.getCurrentSticker();
+//                                    operational.setTypeface(typeface);
+//                                    stickerView.replace(operational);
+//                                    stickerView.invalidate();
+//                                }
+//                            }
+//                        }));
+//                        break;
+//                    case 3:
+//                        stickerUnLock();
+//                        textTool.clear();
+//                        textTool.add(new TextTool("color", R.drawable.color));
+//                        textTool.add(new TextTool("Bg Color", R.drawable.bgcolor));
+//                        textTool.add(new TextTool("Font", R.drawable.font));
+//                        if (stickerView.getCurrentSticker() instanceof TextSticker) {
+//                            TextSticker operational = (TextSticker) stickerView.getCurrentSticker();
+//                            if (click == 0) {
+//                                textTool.add(new TextTool("Left", R.drawable.left));
+//                                operational.setTextAlign(Layout.Alignment.ALIGN_NORMAL);
+//                                click++;
+//                            } else if (click == 1) {
+//                                textTool.add(new TextTool("Center", R.drawable.center));
+//                                operational.setTextAlign(Layout.Alignment.ALIGN_CENTER);
+//                                click++;
+//                            } else if (click == 2) {
+//                                textTool.add(new TextTool("Right", R.drawable.right));
+//                                operational.setTextAlign(Layout.Alignment.ALIGN_OPPOSITE);
+//                                click = 0;
+//                            }
+//                            stickerView.replace(operational);
+//                            stickerView.invalidate();
+//                        }
+//                        textAdapter.notifyDataSetChanged();
+//                        break;
+//                }
+//            }
+//        }));
+//
+//    }
+
 }
