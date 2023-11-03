@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="50dp"
+    android:layout_height="70dp">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="70dp"
+        android:src="@drawable/bg_one"
+        android:scaleType="centerCrop"
+        android:id="@+id/bgImageView"/>
+
+
+</LinearLayout>
